@@ -1,5 +1,6 @@
 var possibleanswers = document.getElementById("possibleanswers");
 var message = document.getElementById('message');
+
 var words = ["cat", "men", "win", "dog", "mut","bar", "sin", "log", "mud", "dad", "pen", "tin", "wow","gun", "car"];
 var printwords = [];
 var guessCount = document.getElementById('guessCount');
@@ -81,7 +82,7 @@ var gameplay = function(){
         guesses++;
     }
 
-    if(guesses == 6){
+    if(guesses == 6 && win == false){
         console.log("BOMB!!!")
         message.innerHTML = "You lose!";
     }
